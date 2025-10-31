@@ -1,0 +1,77 @@
+{
+  "validation_accuracy": 0.8947368421052632,
+  "validation_precision": 0.8333333333333334,
+  "validation_report": "              precision    recall  f1-score   support\n\n        left       1.00      0.78      0.88         9\n       right       0.83      1.00      0.91        10\n\n    accuracy                           0.89        19\n   macro avg       0.92      0.89      0.89        19\nweighted avg       0.91      0.89      0.89        19\n",
+  "validation_confusion_matrix": [
+    [
+      7,
+      2
+    ],
+    [
+      0,
+      10
+    ]
+  ],
+  "test_accuracy": 0.9473684210526315,
+  "test_precision": 0.9,
+  "test_report": "              precision    recall  f1-score   support\n\n        left       1.00      0.90      0.95        10\n       right       0.90      1.00      0.95         9\n\n    accuracy                           0.95        19\n   macro avg       0.95      0.95      0.95        19\nweighted avg       0.95      0.95      0.95        19\n",
+  "test_confusion_matrix": [
+    [
+      9,
+      1
+    ],
+    [
+      0,
+      9
+    ]
+  ],
+  "train_accuracy": 1.0,
+  "train_precision": 1.0,
+  "feature_importances": {
+    "Roll_mean": 0.013450841591006239,
+    "Roll_std": 0.002892941214878464,
+    "Roll_min": 0.004484688736633987,
+    "Roll_max": 0.013363961485692568,
+    "Gyroscope_z_mean": 0.0,
+    "Gyroscope_z_std": 0.0,
+    "Gyroscope_z_min": 0.0,
+    "Gyroscope_z_max": 0.0,
+    "Gravity_x_mean": 0.0,
+    "Gravity_x_std": 0.0,
+    "Gravity_x_min": 0.0,
+    "Gravity_x_max": 0.0,
+    "Rot12_mean": 0.00876061346114254,
+    "Rot12_std": 0.0077925209033321875,
+    "Rot12_min": 0.0035148781304552078,
+    "Rot12_max": 0.01434531366653486,
+    "Rot13_mean": 0.0009441486019182364,
+    "Rot13_std": 0.017756346422874998,
+    "Rot13_min": 0.0035413416019577574,
+    "Rot13_max": 0.010029851067914146,
+    "Rot21_mean": 0.15252063336067145,
+    "Rot21_std": 0.007704425274950849,
+    "Rot21_min": 0.15063182785477983,
+    "Rot21_max": 0.051424750518756286,
+    "Rot22_mean": 0.003208538754477907,
+    "Rot22_std": 0.005303135588834113,
+    "Rot22_min": 0.003147110355421705,
+    "Rot22_max": 0.0070541137945728145,
+    "Rot23_mean": 0.004566679629288265,
+    "Rot23_std": 0.005935729529393072,
+    "Rot23_min": 0.004915091890155628,
+    "Rot23_max": 0.030645803447469932,
+    "Rot31_mean": 0.0105610412020255,
+    "Rot31_std": 0.014521254773338238,
+    "Rot31_min": 0.008893661546139542,
+    "Rot31_max": 0.006269305186680054,
+    "Rot32_mean": 0.17803628518920275,
+    "Rot32_std": 0.007937577307293362,
+    "Rot32_min": 0.06374154059265183,
+    "Rot32_max": 0.08083464097843909,
+    "Rot33_mean": 0.028259252389338747,
+    "Rot33_std": 0.0035471822104709717,
+    "Rot33_min": 0.05145764078049338,
+    "Rot33_max": 0.0107962158368478,
+    "duration": 0.007209115123965532
+  }
+}
