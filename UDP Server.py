@@ -6,7 +6,7 @@ from csv import excel
 from datetime import datetime
 
 UDP_ip = "0.0.0.0"
-UDP_port = 7776
+UDP_port = 49153
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((UDP_ip, UDP_port))
@@ -16,8 +16,8 @@ sock.bind((UDP_ip, UDP_port))
 
 trial_time = datetime.now()
 safe_time = trial_time.strftime("%Y-%m-%d_%H-%M-%S")
-
-csv_filename = fr"C:\Users\KIIT\Desktop\IBG Lab\Entrance Project\data\train\right\imu_data_{safe_time}.csv"
+Hand_side="left"
+csv_filename = fr"C:\Users\KIIT\Desktop\IBG Lab\Entrance Project\data\test\{Hand_side}\imu_data_{safe_time}.csv"
 
 header = [
     "Sequence", "Motion.Timestamp", "Roll", "Pitch", "Yaw",
@@ -166,8 +166,8 @@ try:
             writer.writerow(values)
         print(f"Saved IMU data from {addr}")
 
-except:
-    print(f"Program Interrupted")
+except Exception as e:
+    print(f"Program Interrupted, {e}")
 
 finally:
     # Shifting the rows
@@ -197,7 +197,7 @@ finally:
     #   "very stable". this may need trial and error.
     STABILITY_THRESHOLD = 0.03
 
-    OUTPUT_DIR = r'C:\Users\KIIT\Desktop\IBG Lab\Entrance Project\data\train\right'
+    OUTPUT_DIR = fr'C:\Users\KIIT\Desktop\IBG Lab\Entrance Project\data\test\{Hand_side}'
 
     # The prefix for the new files
     OUTPUT_PREFIX = f'{csv_filename}_single_trial'
@@ -214,4 +214,4 @@ finally:
     )
     # delete input file after being processed
     os.remove(csv_filename)
-    # os.remove(output_filename)
+#     # os.remove(output_filename)

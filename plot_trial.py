@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the CSV file
-df = pd.read_csv(r"C:\Users\KIIT\Desktop\IBG Lab\Entrance Project\data\train\right\imu_data_2025-10-29_20-59-58_fixed.csv")
+df = pd.read_csv(r"C:\Users\KIIT\Desktop\IBG Lab\Entrance Project\data_0\imu_data_2025-10-30_08-43-55_fixed.csv")
 
 features = [
     "Roll", "Pitch", "Yaw",
