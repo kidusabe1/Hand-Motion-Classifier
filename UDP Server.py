@@ -12,7 +12,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((UDP_ip, UDP_port))
 
 
-# To provide unique ID to each trial.
+# unique ID to each trial.
 
 trial_time = datetime.now()
 safe_time = trial_time.strftime("%Y-%m-%d_%H-%M-%S")
@@ -44,10 +44,10 @@ def fix_imu_data(input_file_path, output_file_path):
         print(f"Error reading CSV: {e}")
         return
 
-    # Create a copy to avoid modifying the original dataframe
+    # a copy to avoid modifying the original dataframe
     df_fixed = input_df.copy()
 
-    # mapping of data shifts.
+    # mapping of data shifts
     column_replacements = {
         'Accelerometer.x': df_fixed['Accelerometer.y'],
         'Accelerometer.y': df_fixed['Accelerometer.z'],
@@ -96,8 +96,8 @@ def segment_by_stability(input_data, col_name, rate_hz, min_rest_sec,
         print(f"Window: {rolling_window_samples} samples. Min Rest: {min_rest_samples} samples.")
 
         #   Calculate the rolling standard deviation
-        #    This measures how much the signal is changing.
-        #    center=True makes it more accurate by looking "forwards and backwards".
+        #    This measures how much the signal is changing
+        #    center=True makes it more accurate by looking "forwards and backwards"
         df['rolling_std'] = df[col_name].rolling(
             window=rolling_window_samples,
             center=True
